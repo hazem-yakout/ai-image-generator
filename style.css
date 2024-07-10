@@ -65,3 +65,74 @@ button:hover {
 .images div img {
   width: 100%s;
 }
+@media (max-width: 1200px) {
+  .prompt {
+    width: 80%;
+  }
+
+  input {
+    width: 70%;
+  }
+
+  button {
+    width: 25%;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 900px) {
+  .prompt {
+    width: 90%;
+  }
+
+  input {
+    width: 65%;
+  }
+
+  button {
+    width: 30%;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .images div {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .prompt {
+    width: 100%;
+  }
+
+  input {
+    width: 60%;
+  }
+
+  button {
+    width: 35%;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  .images {
+    grid-template-columns: 1fr;
+  }
+
+  .images div {
+    height: 150px;
+    width: 100%;
+  }
+}
