@@ -1,31 +1,39 @@
 
-const api = "4b16dceec3745598edf7c95d784a4096";
-const inp = document.getElementById("inp");
+const apiKey = "4b16dceec3745598edf7c95d784a4096";
+const generateBtn = document.getElementById("generateBtn");
+const promptInput = document.getElementById("prompt");
 const images = document.querySelector(".images");
 
-async function getImage() {
-  const formData = new FormData();
-  formData.append('image', inp.files[0]);
-
-  const methods = {
+async function generateImage(prompt) {
+  const response = await fetch("https://api.openai.com/v1/images/generations", {
     method: "POST",
-    body: formData,
-  };
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${apiKey}`
+    },
+    body: JSON.stringify({
+      prompt: prompt,
+      n: 1,
+      size: "1024x1024"
+    })
+  });
 
-  const res = await fetch(`https://api.imgbb.com/1/upload?key=${api}`, methods);
-  const data = await res.json();
-
-  if (data.success) {
-    const photo = data.data;
-    const cont = document.createElement("div");
-    images.append(cont);
+  const data = await response.json();
+  if (data.data && data.data.length > 0) {
+    const imageUrl = data.data[0].url;
     const img = document.createElement("img");
-    cont.append(img);
-    img.src = photo.url;
+    img.src = imageUrl;
+    images.appendChild(img);
   } else {
-    console.error('Error uploading image:', data);
+    console.error("No image generated.");
   }
 }
 
-// Add an event listener to call getImage when a file is selected
-inp.addEventListener('change', getImage);
+generateBtn.addEventListener("click", () => {
+  const prompt = promptInput.value;
+  if (prompt) {
+    generateImage(prompt);
+  } else {
+    alert("Please enter a prompt.");
+  }
+});
