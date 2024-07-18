@@ -1,132 +1,137 @@
-
-
-
-
 /* style.css */
 
 body {
-    background-color: #1d2023;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+  background-color: #1d2023;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 h2 {
-    color: white;
-    margin-top: 20px;
+  color: white;
+  margin-top: 20px;
 }
 
 .img-box {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    text-align: center;  display: none;
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  text-align: center;
+  display: none;
 }
 
 .img-box p {
-    display: none;
-    font-size: 18px;
-    color: white;
+  display: none;
+  font-size: 18px;
+  color: white;
 }
 
 .images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .item {
-    flex: 1 1 calc(33.333% - 20px);
-    max-width: calc(33.333% - 20px);
-    box-sizing: border-box;
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    border: none;
-    justify-content: center;
-    align-items: center;
-    background-color: #45494e;
-    height: 300px;
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #45494e;
+  height: 300px;
 }
 
 .item img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;  
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
 }
 
 .prompt {
-    margin: 20px auto;
-    text-align: center;
+  margin: 20px auto;
+  text-align: center;
 }
 
 .prompt input {
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .prompt button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: all 0.3s ease;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: yellow;
-    color: black;
+  background-color: yellow;
+  color: black;
 }
 
 .prompt button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
 img {
-    height: 300px;
-    width: 300px;
+  height: 300px;
+  width: 300px;
 }
-
 
 /* Responsive Styles */
 
 @media (max-width: 1024px) {
-    .item {
-        flex: 1 1 calc(50% - 20px);
-        max-width: calc(50% - 20px);
-    }
+  .item {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
 }
 
 @media (max-width: 768px) {
-    .item {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-    .prompt input {
-        width: 100%;
-    }
+  .item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .prompt input {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
-    img {
-        height: auto;
-        width: 100%;
-    }
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+img {
+  transition: all 0.3s ease;
+}
+
+img:hover {
+  border: 2px solid yellow;
+  border-radius: 20px;
 }
