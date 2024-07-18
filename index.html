@@ -4,26 +4,24 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>AI Image Generator</title>
 </head>
 
-
-</body>
-
-</html>
-
 <body>
     <h2>AI Image Generator</h2>
-    <div class="images">
-        <div></div>
-        <div></div>
-        <div></div>
+    <div class="img-box">
+        <p>Generating...</p>
+        <div class="images">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
     </div>
     <div class="prompt">
-        <input type="text" id="inp" />
-        <button onclick="getImage()">Generate</button>
+        <input type="text" id="inp" placeholder="Describe what you want to generate by AI: " />
+        <button class="Generate">Generate</button>
     </div>
     <script src="script.js"></script>
 </body>
