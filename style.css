@@ -1,138 +1,290 @@
-* {
-  padding: 0;
-  margin: 0;
-  font-family: sans-serif;
+
+/* * {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
 }
 
 body {
-  background-color: #1d2023;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  height: 100vh;
+    background-color: #1d2023;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
 }
 
 h2 {
-  color: #fff;
-  font-size: 40px;
+    color: #fff;
+    font-size: 40px;
 }
 
 .prompt {
-  background-color: #292c31;
-  padding: 5px;
-  width: 620px;
-  border: 3px solid #36383d;
-  border-radius: 10px;
+    background-color: #292c31;
+    padding: 5px;
+    width: 620px;
+    border: 3px solid #36383d;
+    border-radius: 10px;
 }
 
 input,
 button {
-  padding: 10px;
-  border: none;
-  color: #fff;
-  font-size: 20px;
+    padding: 10px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
 }
 
 input {
-  background-color: #292c31;
-  outline: none;
-  width: 75%;
+    background-color: #292c31;
+    outline: none;
+    width: 75%;
 }
 
 button {
-  background-color: #36383d;
-  width: 20%;
-  cursor: pointer;
+    background-color: #36383d;
+    width: 20%;
+    cursor: pointer;
 }
 
 button:hover {
-  background-color: #45464a;
+    background-color: #45464a;
 }
 
 .images {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
 .images div {
-  height: 200px;
-  width: 200px;
-  background-color: #292c31;
+    height: 200px;
+    width: 200px;
+    background-color: #292c31;
 }
 
 .images div img {
-  width: 100%s;
+    width: 100%;
 }
+
+p {
+    text-align: center;
+    color: white;
+    margin-top: 3px;
+    font-size: 30px;
+}
+
+.img-box {
+    display: none;
+}
+
+.images {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+}
+
+.img-box img {
+    max-width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.img-box img:hover {
+    border-color: yellow;
+}
+
 @media (max-width: 1200px) {
-  .prompt {
-    width: 80%;
-  }
-
-  input {
-    width: 70%;
-  }
-
-  button {
-    width: 25%;
-  }
-
-  h2 {
-    font-size: 35px;
-  }
+    .prompt {
+        width: 80%;
+    }
+    input {
+        width: 70%;
+    }
+    button {
+        width: 25%;
+    }
+    h2 {
+        font-size: 35px;
+    }
 }
 
 @media (max-width: 900px) {
-  .prompt {
-    width: 90%;
-  }
-
-  input {
-    width: 65%;
-  }
-
-  button {
-    width: 30%;
-  }
-
-  h2 {
-    font-size: 30px;
-  }
-
-  .images {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .images div {
-    height: 150px;
-    width: 150px;
-  }
+    .prompt {
+        width: 90%;
+    }
+    input {
+        width: 65%;
+    }
+    button {
+        width: 30%;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    .images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .images div {
+        height: 150px;
+        width: 150px;
+    }
 }
 
 @media (max-width: 600px) {
-  .prompt {
+    .prompt {
+        width: 100%;
+    }
+    input {
+        width: 60%;
+    }
+    button {
+        width: 35%;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    .images {
+        grid-template-columns: 1fr;
+    }
+    .images div {
+        height: 150px;
+        width: 100%;
+    }
+} */
+
+
+/* style.css */
+
+
+/* style.css */
+
+body {
+    background-color: #1d2023;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h2 {
+    color: white;
+    margin-top: 20px;
+}
+
+.img-box {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.img-box p {
+    display: none;
+    font-size: 18px;
+    color: white;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.item {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #45494e;
+    height: 300px;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.prompt {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.prompt input {
     width: 100%;
-  }
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
 
-  input {
-    width: 60%;
-  }
+.prompt button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
 
-  button {
-    width: 35%;
-  }
+button:hover {
+    background-color: yellow;
+    color: black;
+}
 
-  h2 {
-    font-size: 25px;
-  }
+.prompt button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
 
-  .images {
-    grid-template-columns: 1fr;
-  }
+img {
+    height: 300px;
+    width: 300px;
+}
 
-  .images div {
-    height: 150px;
-    width: 100%;
-  }
+
+/* Responsive Styles */
+
+@media (max-width: 1024px) {
+    .item {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .prompt input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    img {
+        height: auto;
+        width: 100%;
+    }
 }
