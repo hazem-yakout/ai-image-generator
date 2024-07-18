@@ -1,163 +1,5 @@
 
-/* * {
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-}
 
-body {
-    background-color: #1d2023;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 100vh;
-}
-
-h2 {
-    color: #fff;
-    font-size: 40px;
-}
-
-.prompt {
-    background-color: #292c31;
-    padding: 5px;
-    width: 620px;
-    border: 3px solid #36383d;
-    border-radius: 10px;
-}
-
-input,
-button {
-    padding: 10px;
-    border: none;
-    color: #fff;
-    font-size: 20px;
-}
-
-input {
-    background-color: #292c31;
-    outline: none;
-    width: 75%;
-}
-
-button {
-    background-color: #36383d;
-    width: 20%;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45464a;
-}
-
-.images {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-
-.images div {
-    height: 200px;
-    width: 200px;
-    background-color: #292c31;
-}
-
-.images div img {
-    width: 100%;
-}
-
-p {
-    text-align: center;
-    color: white;
-    margin-top: 3px;
-    font-size: 30px;
-}
-
-.img-box {
-    display: none;
-}
-
-.images {
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 10px;
-}
-
-.img-box img {
-    max-width: 100%;
-    border-radius: 3px;
-    cursor: pointer;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
-}
-
-.img-box img:hover {
-    border-color: yellow;
-}
-
-@media (max-width: 1200px) {
-    .prompt {
-        width: 80%;
-    }
-    input {
-        width: 70%;
-    }
-    button {
-        width: 25%;
-    }
-    h2 {
-        font-size: 35px;
-    }
-}
-
-@media (max-width: 900px) {
-    .prompt {
-        width: 90%;
-    }
-    input {
-        width: 65%;
-    }
-    button {
-        width: 30%;
-    }
-    h2 {
-        font-size: 30px;
-    }
-    .images {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .images div {
-        height: 150px;
-        width: 150px;
-    }
-}
-
-@media (max-width: 600px) {
-    .prompt {
-        width: 100%;
-    }
-    input {
-        width: 60%;
-    }
-    button {
-        width: 35%;
-    }
-    h2 {
-        font-size: 25px;
-    }
-    .images {
-        grid-template-columns: 1fr;
-    }
-    .images div {
-        height: 150px;
-        width: 100%;
-    }
-} */
-
-
-/* style.css */
 
 
 /* style.css */
@@ -183,7 +25,7 @@ h2 {
     width: 90%;
     max-width: 1200px;
     margin: 20px auto;
-    text-align: center;
+    text-align: center;  display: none;
 }
 
 .img-box p {
@@ -217,7 +59,7 @@ h2 {
     max-width: 100%;
     height: auto;
     display: block;
-    border-radius: 10px;
+    border-radius: 10px;  
 }
 
 .prompt {
